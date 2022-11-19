@@ -14,4 +14,9 @@ public class InfoText : MonoBehaviour
     {
         text.text = txt;
     }
+
+    public void SetIcon(Sprite sprite)
+    {
+        icon.sprite = sprite;
+    }
 }

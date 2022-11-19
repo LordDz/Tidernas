@@ -11,11 +11,18 @@ public class ReportsPage : MonoBehaviour
     JobWorkForce jobWorkForce;
     BtnChoiceContainer btnChoiceContainer;
     BtnHireWorkersContainer btnHireWorkersContainer;
+    WorkersForHire workersForHire;
     DayHolder dayHolder;
+
+    [SerializeField]
+    InfoText textWorker;
 
     private bool isReportStarted = false;
 
     public Button btnStart;
+
+    [SerializeField]
+    private Sprite spriteFisher, spriteFactory;
 
     // Use this for initialization
     void Start()
@@ -25,6 +32,7 @@ public class ReportsPage : MonoBehaviour
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
         dayHolder = FindObjectOfType<DayHolder>();
+        workersForHire = FindObjectOfType<WorkersForHire>();
         btnStart.gameObject.SetActive(false);
     }
 
@@ -56,7 +64,7 @@ public class ReportsPage : MonoBehaviour
         {
             if (cooldown < 0)
             {
-                if (index < resourceHolder.listWorkers.Count)
+                if (index < resourceHolder.listActiveWorkers.Count)
                 {
                     DoWork();
                 }
@@ -74,7 +82,12 @@ public class ReportsPage : MonoBehaviour
 
     private void DoWork()
     {
-        JobChoice workerJob = resourceHolder.listWorkers[index];
+        JobChoice workerJob = resourceHolder.listActiveWorkers[index];
+        var worker = workersForHire.GetWorker(index);
+        string workType = workerJob == JobChoice.fishing ? "fisher" : "factorian";
+        Sprite workSprite = workerJob == JobChoice.fishing ? spriteFisher : spriteFactory;
+        textWorker.SetText(worker.personName + " " + workType);
+        textWorker.SetIcon(workSprite);
         jobWorkForce.WorkJob(workerJob);
 
         cooldown = timePerWorker;

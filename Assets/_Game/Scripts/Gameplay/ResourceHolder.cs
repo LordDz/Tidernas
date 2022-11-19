@@ -21,7 +21,7 @@ public class ResourceHolder : MonoBehaviour
     public int nrOfDeaths = 0;
 
     [HideInInspector]
-    public List<JobChoice> listWorkers = new List<JobChoice>();
+    public List<JobChoice> listActiveWorkers = new List<JobChoice>();
 
     ResourceDisplay resourceDisplay;
     ReportsPage reportsPage;
@@ -44,7 +44,7 @@ public class ResourceHolder : MonoBehaviour
 
     public void AddActiveWorker(JobChoice jobChoice)
     {
-        listWorkers.Add(jobChoice);
+        listActiveWorkers.Add(jobChoice);
         employeesUnEmployed -= 1;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
 
@@ -56,7 +56,7 @@ public class ResourceHolder : MonoBehaviour
 
     public void ResetForNextDay()
     {
-        listWorkers.Clear();
+        listActiveWorkers.Clear();
         employeesUnEmployed = employeesTotal;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
     }

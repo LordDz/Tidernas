@@ -7,13 +7,15 @@ using TMPro;
 public class Player : MonoBehaviour
 {
 
-    string name;
+    public string playerName;
 
     [SerializeField]
-    TMP_InputField input;
+    TMP_InputField playerInput;
 
     public void SubmitName()
     {
-        name = input.text;
+        playerName = playerInput.text;
+        Debug.Log("Company name: " + playerName);
+        gameObject.SetActive(false);
     }
 }

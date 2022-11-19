@@ -18,6 +18,8 @@ public class GameStatus : MonoBehaviour
 
     ResourceDisplay resourceDisplay;
 
+    HighScoreHandler highScoreHandler;
+
     private void Awake()
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
@@ -37,7 +39,10 @@ public class GameStatus : MonoBehaviour
 
         if (textEndScreen != null)
         {
-            // Death Scene
+            // You're dead, Jim
+            highScoreHandler.ApplyScore();
+            int highScore = highScoreHandler.GetScore();
+
             textEndScreen.gameObject.SetActive(true);
             string message = "";
             int possibleDeaths = nrOfDeaths + employeesTotal;
@@ -64,5 +69,6 @@ public class GameStatus : MonoBehaviour
             }
             textEndScreen.SetText(message);
         }
+
     }
 }

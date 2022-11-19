@@ -20,6 +20,7 @@ public class GameStatus : MonoBehaviour
 
     [SerializeField]
     AudioSource musicMain, musicEnd;
+    HighScoreHandler highScoreHandler;
 
     private void Awake()
     {
@@ -40,7 +41,10 @@ public class GameStatus : MonoBehaviour
 
         if (textEndScreen != null)
         {
-            // Death Scene
+            // You're dead, Jim
+            highScoreHandler.ApplyScore();
+            int highScore = highScoreHandler.GetScore();
+
             textEndScreen.gameObject.SetActive(true);
             string message = "";
             int possibleDeaths = nrOfDeaths + employeesTotal;
@@ -70,5 +74,6 @@ public class GameStatus : MonoBehaviour
             }
             textEndScreen.SetText(message);
         }
+
     }
 }

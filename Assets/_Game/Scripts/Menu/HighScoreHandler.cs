@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScore : MonoBehaviour
+public class HighScoreHandler : MonoBehaviour
 {
     ResourceHolder resourceHolder;
     DayHolder dayHolder;
@@ -27,7 +27,7 @@ public class HighScore : MonoBehaviour
         }
     }
 
-    private int GetScore()
+    public int GetScore()
     {
         return resourceHolder.cash * dayHolder.currentWeek;
     }

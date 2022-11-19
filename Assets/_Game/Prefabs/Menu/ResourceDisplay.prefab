@@ -30,11 +30,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387219333180977337}
+  - {fileID: 8320666026021353163}
   - {fileID: 4196576915189885109}
   - {fileID: 7629611934391952164}
   - {fileID: 413740607799693453}
   - {fileID: 5154752632361908725}
-  - {fileID: 8320666026021353163}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchorMax.x
@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchorMax.x
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchorMax.x
@@ -598,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchorMax.x
@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8172015007933297681, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_AnchorMax.x

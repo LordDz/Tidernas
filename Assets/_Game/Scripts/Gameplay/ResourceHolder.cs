@@ -8,7 +8,7 @@ public class ResourceHolder : MonoBehaviour
     public int cash;
 
     [SerializeField]
-    public int employees;
+    public int employeesUnEmployeed, employeesTotal;
 
     [SerializeField]
     public int publicOpinion;

@@ -2,25 +2,25 @@ using UnityEngine;
 
 public class BtnChoice : MonoBehaviour
 {
-    private DayHolder dayHolder;
+    private JobWorkForce jobWorkForce;
 
     private void Start()
     {
-        dayHolder = FindObjectOfType<DayHolder>();
+        jobWorkForce = FindObjectOfType<JobWorkForce>();
     }
 
     public void ChoiceOne()
     {
-        dayHolder.SelectChoice(1);
+        jobWorkForce.WorkJob(JobChoice.fishing);
     }
 
     public void ChoiceTwo()
     {
-        dayHolder.SelectChoice(2);
+        jobWorkForce.WorkJob(JobChoice.factory);
     }
 
     public void ChoiceThree()
     {
-        dayHolder.SelectChoice(3);
+        //dayHolder.SelectChoice(3);
     }
 }

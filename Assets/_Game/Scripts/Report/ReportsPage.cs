@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ReportsPage : MonoBehaviour
 {
-    const float timePerWorker = 0.5f;
+    const float timePerWorker = 0.9f;
     private float cooldown = 0;
     int index = 0;
 

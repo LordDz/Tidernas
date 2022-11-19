@@ -48,6 +48,6 @@ MonoBehaviour:
   cash: 9
   employeesTotal: 6
   employeesUnEmployed: 0
-  publicOpinion: 10
+  publicOpinion: 3
   nrOfDeaths: 0
   listWorkers: 

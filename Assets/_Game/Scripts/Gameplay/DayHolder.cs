@@ -28,6 +28,8 @@ public class DayHolder : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI dayText;
 
+
+
     private void Awake()
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
@@ -72,6 +74,7 @@ public class DayHolder : MonoBehaviour
 
     private void SwitchToNextDay()
     {
+        Debug.Log("Current day: " + currentDay);
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
         dayText.text = selectedDay.nameOfDay;

@@ -28,14 +28,18 @@ public class ResourceHolder : MonoBehaviour
 
     BtnHireWorkersContainer btnHireWorkersContainer;
 
+    WorkersForHire workersForHire;
+    WorkerInfo nextWorker;
+
     private void Start()
     {
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
         reportsPage = FindObjectOfType<ReportsPage>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
+        workersForHire = FindObjectOfType<WorkersForHire>();
 
         employeesUnEmployed = employeesTotal;
-
+        nextWorker = workersForHire.GetWorkerInfo();
     }
 
     public void AddActiveWorker(JobChoice jobChoice)
@@ -66,6 +70,9 @@ public class ResourceHolder : MonoBehaviour
             employeesTotal += 1;
             resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
             resourceDisplay.textCash.SetText(cash.ToString());
+
+            workersForHire.AddNewWorker(nextWorker);
+            nextWorker = workersForHire.GetWorkerInfo();
 
             if (cash < workerCost)
             {

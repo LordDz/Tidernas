@@ -14,14 +14,21 @@ public class DayHolder : MonoBehaviour
     [SerializeField]
     List<Day> listDays;
 
-    [SerializeField]
     ResourceHolder resourceHolder;
 
     [SerializeField]
     Image bg;
 
-    [SerializeField]
     GameStatus gameStatus;
+
+    [SerializeField]
+    Text dayText;
+
+    private void Awake()
+    {
+        resourceHolder = FindObjectOfType<ResourceHolder>();
+        gameStatus = FindObjectOfType<GameStatus>();
+    }
 
     public void SelectChoice(int choice)
     {
@@ -63,5 +70,6 @@ public class DayHolder : MonoBehaviour
     {
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
+        dayText.text = selectedDay.nameOfDay;
     }
 }

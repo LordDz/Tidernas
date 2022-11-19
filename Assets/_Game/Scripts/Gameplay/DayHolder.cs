@@ -57,7 +57,7 @@ public class DayHolder : MonoBehaviour
     {
         currentDay++;
 
-        if (currentDay > DAY_NEXT_WEEK)
+        if (currentDay >= DAY_NEXT_WEEK)
         {
             currentDay = 0;
             currentWeek++;

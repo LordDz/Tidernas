@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ResourceDisplay : MonoBehaviour
 {
-    public Text textCash, textEmployees, textPublicOpinion;
+    public InfoText textCash, textEmployees, textPublicOpinion, textDeathCount;
 }

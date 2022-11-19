@@ -377,6 +377,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 15756890277736910, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 15756890277736910, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3bd4b6b26752d4e4cb39d4f65b0712bb, type: 2}
+    - target: {fileID: 15756890277736910, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 15756890277736910, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5925062181047220833, guid: 3bd4b6b26752d4e4cb39d4f65b0712bb, type: 2}
     - target: {fileID: 2725999555604493040, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
       propertyPath: dayHolder
       value: 
@@ -477,6 +493,14 @@ PrefabInstance:
       propertyPath: dayHolder
       value: 
       objectReference: {fileID: 2109389393}
+    - target: {fileID: 6046950113911831135, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046950113911831135, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
 --- !u!1001 &3602048915950728531
@@ -548,6 +572,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1634149138}
     - target: {fileID: 4447088214928789256, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
+      propertyPath: dayText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447088214928789256, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: gameStatus
       value: 
       objectReference: {fileID: 671523629}
@@ -557,11 +585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4447088214928789257, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -43
       objectReference: {fileID: 0}
     - target: {fileID: 4447088214928789257, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -38
       objectReference: {fileID: 0}
     - target: {fileID: 4447088214928789257, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: m_LocalPosition.z

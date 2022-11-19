@@ -12,7 +12,6 @@ public class DayHolder : MonoBehaviour
     [SerializeField]
     private int currentDay, currentWeek = -1;
     public int CurrentDay { get { return currentDay; } }
-
     private Day selectedDay = null;
 
     [SerializeField]
@@ -25,10 +24,7 @@ public class DayHolder : MonoBehaviour
 
     GameStatus gameStatus;
 
-    [SerializeField]
-    TextMeshProUGUI dayText;
-
-
+    public InfoText dayText;
 
     private void Awake()
     {
@@ -77,6 +73,6 @@ public class DayHolder : MonoBehaviour
         Debug.Log("Current day: " + currentDay);
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
-        dayText.text = selectedDay.nameOfDay;
+        dayText.SetText(selectedDay.nameOfDay);
     }
 }

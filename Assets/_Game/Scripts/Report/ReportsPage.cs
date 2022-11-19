@@ -35,7 +35,7 @@ public class ReportsPage : MonoBehaviour
     public void StartReport()
     {
         btnStart.gameObject.SetActive(false);
-        cooldown = 1.5f;
+        cooldown = 1.0f;
         index = 0;
         isReportStarted = true;
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -7,6 +8,8 @@ using TMPro;
 
 public class DayHolder : MonoBehaviour
 {
+    const int DAY_NEXT_WEEK = 7;
+
     [SerializeField]
     private int currentDay, currentWeek = -1;
     public int CurrentDay { get { return currentDay; } }
@@ -53,7 +56,7 @@ public class DayHolder : MonoBehaviour
     {
         currentDay++;
 
-        if (currentDay >= 7)
+        if (currentDay > DAY_NEXT_WEEK)
         {
             currentDay = 0;
             currentWeek++;

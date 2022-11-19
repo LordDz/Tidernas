@@ -40,7 +40,12 @@ public class GameStatus : MonoBehaviour
             // Death Scene
             textEndScreen.gameObject.SetActive(true);
             string message = "";
-            int deathRatio = (nrOfDeaths / (nrOfDeaths + employeesTotal)) * 100;
+            int possibleDeaths = nrOfDeaths + employeesTotal;
+            float deathRatio = (nrOfDeaths / (nrOfDeaths + employeesTotal)) * 100;
+            Debug.Log("nrOfDeaths: " + nrOfDeaths);
+            Debug.Log("possibleDeaths: " + possibleDeaths);
+            Debug.Log("employeesTotal: " + employeesTotal);
+            Debug.Log("deathRatio: " + deathRatio);
             if (nrOfDeaths == 0)
             {
                 message = "You lost and all workers lived. What were you thinking?!";
@@ -51,7 +56,7 @@ public class GameStatus : MonoBehaviour
             }
             else if (deathRatio >= 75 && deathRatio < 100)
             {
-                message = "You lost but at least you had use of your resources.";
+                message = "You lost but at least you could use your resources.";
             }
             else
             {

@@ -55,7 +55,8 @@ public class JobWorkForce : MonoBehaviour
         resourceHolder.cash += money;
         resourceHolder.employeesUnEmployed -= 1;
 
-        resourceDisplay.textEmployees.SetText(resourceHolder.employeesUnEmployed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
+        resourceDisplay.textEmployees.SetText(resourceHolder.employeesUnEmployeed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
+        resourceDisplay.textDeathCount.SetText(resourceHolder.nrOfDeaths.ToString());
         resourceDisplay.textCash.SetText(resourceHolder.cash.ToString());
         audioSource.Play();
 

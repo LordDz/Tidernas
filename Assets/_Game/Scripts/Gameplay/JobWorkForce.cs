@@ -12,7 +12,16 @@ public class JobWorkForce : MonoBehaviour
     AudioSource audioSource;
 
     [SerializeField]
-    AudioClip soundFishDeath, SoundFishWin, soundFactoryDeath, soundFactoryWin;
+    AudioClip soundFishDeath01, soundFishDeath02, soundFishDeath03, soundFishDeath04;
+
+    [SerializeField]
+    AudioClip soundFishWin01, soundFishWin02, soundFishWin03, soundFishWin04;
+
+    [SerializeField]
+    AudioClip soundFactoryDeath01, soundFactoryDeath02, soundFactoryDeath03, soundFactoryDeath04;
+
+    [SerializeField]
+    AudioClip soundFactoryWin01, soundFactoryWin02, soundFactoryWin03, soundFactoryWin04;
 
     private void Awake()
     {
@@ -25,23 +34,51 @@ public class JobWorkForce : MonoBehaviour
         switch (jobChoice)
         {
             case JobChoice.fishing:
-                DoWork(0.25f, cashFishing, soundFishDeath, SoundFishWin);
+                DoWork(0.25f, cashFishing, soundFishDeath01, soundFishDeath02, soundFishDeath03, soundFishDeath04, soundFishWin01, soundFishWin02, soundFishWin03, soundFishWin04);
                 break;
             case JobChoice.factory:
-                DoWork(0.5f, cashFactory, soundFactoryDeath, soundFactoryWin);
+                DoWork(0.5f, cashFactory, soundFactoryDeath01, soundFactoryDeath02, soundFactoryDeath03, soundFactoryDeath04, soundFactoryWin01, soundFactoryWin02, soundFactoryWin03, soundFactoryWin04);
                 break;
         }
     }
 
-    private void DoWork(float maxChance, int money, AudioClip soundDeath, AudioClip soundWin)
+    private void DoWork(float maxChance, int money, AudioClip death01, AudioClip death02, AudioClip death03, AudioClip death04, AudioClip win01, AudioClip win02, AudioClip win03, AudioClip win04)
     {
         if (Random.value > maxChance)
         {
-            audioSource.clip = soundWin;
+            switch (Random.Range(1, 4))
+            {
+                case 1:
+                    audioSource.clip = win01;
+                    break;
+                case 2:
+                    audioSource.clip = win02;
+                    break;
+                case 3:
+                    audioSource.clip = win03;
+                    break;
+                case 4:
+                    audioSource.clip = win04;
+                    break;
+            }
         }
         else
         {
-            audioSource.clip = soundDeath;
+            switch (Random.Range(1, 4))
+            {
+                case 1:
+                    audioSource.clip = death01;
+                    break;
+                case 2:
+                    audioSource.clip = death02;
+                    break;
+                case 3:
+                    audioSource.clip = death03;
+                    break;
+                case 4:
+                    audioSource.clip = death04;
+                    break;
+            }
             resourceHolder.nrOfDeaths += 1;
             resourceHolder.employeesTotal -= 1;
             resourceHolder.publicOpinion -= 1;

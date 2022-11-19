@@ -3,13 +3,14 @@ using UnityEngine.UI;
 
 public class ReportsPage : MonoBehaviour
 {
-    const float timePerWorker = 0.5f;
+    const float timePerWorker = 0.9f;
     private float cooldown = 0;
     int index = 0;
 
     ResourceHolder resourceHolder;
     JobWorkForce jobWorkForce;
     BtnChoiceContainer btnChoiceContainer;
+    BtnHireWorkersContainer btnHireWorkersContainer;
     DayHolder dayHolder;
 
     private bool isReportStarted = false;
@@ -22,6 +23,7 @@ public class ReportsPage : MonoBehaviour
         resourceHolder = FindObjectOfType<ResourceHolder>();
         jobWorkForce = FindObjectOfType<JobWorkForce>();
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
+        btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
         dayHolder = FindObjectOfType<DayHolder>();
         btnStart.gameObject.SetActive(false);
     }
@@ -29,6 +31,7 @@ public class ReportsPage : MonoBehaviour
     public void ShowReportPage()
     {
         btnChoiceContainer.HideButtons();
+        btnHireWorkersContainer.HideButtons();
         btnStart.gameObject.SetActive(true);
     }
 

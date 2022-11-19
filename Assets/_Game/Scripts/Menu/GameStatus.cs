@@ -18,12 +18,15 @@ public class GameStatus : MonoBehaviour
 
     ResourceDisplay resourceDisplay;
 
+    [SerializeField]
+    AudioSource musicMain, musicEnd;
     HighScoreHandler highScoreHandler;
 
     private void Awake()
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
+        highScoreHandler = FindObjectOfType<HighScoreHandler>();
         textEndScreen.gameObject.SetActive(false);
     }
 
@@ -51,6 +54,9 @@ public class GameStatus : MonoBehaviour
             Debug.Log("possibleDeaths: " + possibleDeaths);
             Debug.Log("employeesTotal: " + employeesTotal);
             Debug.Log("deathRatio: " + deathRatio);
+
+            musicMain.Stop();
+            musicEnd.Play();
             if (nrOfDeaths == 0)
             {
                 message = "You lost and all workers lived. What were you thinking?!";

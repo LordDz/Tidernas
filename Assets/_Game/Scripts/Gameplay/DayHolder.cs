@@ -10,7 +10,8 @@ public class DayHolder : MonoBehaviour
     const int DAY_NEXT_WEEK = 7;
 
     [SerializeField]
-    private int currentDay, currentWeek = -1;
+    private int currentDay = -1;
+    public int currentWeek = -1;
     public int CurrentDay { get { return currentDay; } }
     private Day selectedDay = null;
 

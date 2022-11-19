@@ -252,6 +252,7 @@ RectTransform:
   - {fileID: 8428488384524692643}
   - {fileID: 7116977194591179895}
   - {fileID: 5619409524218866202}
+  - {fileID: 1138353567370801867}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -321,6 +322,108 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &4746921279180074817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138353567370801867}
+  - component: {fileID: 8452069699791189806}
+  m_Layer: 0
+  m_Name: WorkersForHire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138353567370801867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746921279180074817}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2725999556752732647}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8452069699791189806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746921279180074817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859280408ec7f9046ad1b9e2f14c3482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListNames:
+  - Lille-Bagarn
+  - "Skyffelm\xF6rdarn"
+  - Rock-Olga
+  - Porr-Birger
+  - "Tio i Tv\xE5"
+  - Skinnet
+  - Pipas
+  - Lammkotletten
+  - "\xD6land"
+  - Skit i handfatet
+  - "R\xE5ttj\xE4garn"
+  - Sonny Liston
+  - Snoddas
+  - "N\xF6tkn\xE4pparn"
+  - Piss i huvet
+  - "Textilingenj\xF6ren"
+  - "Fem\xF6ringen"
+  - Skeddegalen
+  - "G\xF6ken Wellpapp"
+  - Bror Duktig
+  - Skuggan
+  - Maffi
+  - Puddingen
+  - "N\xF6ff N\xF6ff"
+  - Spader Knekt
+  - Trampa Vatten
+  - Loffe
+  - Snoppen
+  - Gissa mitt jobb
+  - Domaren
+  - Skatteledningen
+  - Tjuven i Bagdad
+  - Manolito
+  - "L\xF6fbergs Lila"
+  - "Tio\xF6ringen"
+  - Pinchen
+  - Frukostklubben
+  - Kondomen
+  - Allan i Grottan
+  - Dansa med Mig
+  - Spiskatten
+  - Kocken
+  - "G\xE5rda Sm\xE5lands Amora"
+  - Sme-Olle
+  - Tjorven
+  - Tennhausen
+  - "Arne-R\xF6jan"
+  - Korven
+  - Bagaren
+  - "Sn\xF6ret"
+  - "M\xE4rket"
+  - "Sn\xF6ret"
+  ListSprites:
+  - {fileID: 21300000, guid: b8c695f2566d7c24d82d9303e130f691, type: 3}
+  - {fileID: 21300000, guid: 7cf937551e89f2e4cacc47905e85af6f, type: 3}
+  defaultName: Worker
+  defaultSprite: {fileID: 21300000, guid: b8c695f2566d7c24d82d9303e130f691, type: 3}
 --- !u!1 &6896608650851456443
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +1055,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71bb872e05679d740a9e2a8e383f7dc7, type: 3}
+--- !u!224 &74992432588863510 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5478661576343661566, guid: 71bb872e05679d740a9e2a8e383f7dc7, type: 3}
+  m_PrefabInstance: {fileID: 5549121478135813096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2187686571381465476 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6007320101816316524, guid: 71bb872e05679d740a9e2a8e383f7dc7, type: 3}
@@ -1214,3 +1322,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 196967346903636175, guid: 159e0d5cb05cd6043beb2f1797afaa2e, type: 3}
   m_PrefabInstance: {fileID: 8521871823037756524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8981104756022524194
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 74992432588863510}
+    m_Modifications:
+    - target: {fileID: 8569420198002988087, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_Name
+      value: WorkerInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117948165514348572, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c593290b6613b364cb6d911b2c3915c1, type: 3}

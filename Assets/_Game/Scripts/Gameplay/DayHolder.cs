@@ -61,14 +61,13 @@ public class DayHolder : MonoBehaviour
     {
         Debug.Log("Current day: " + currentDay);
 
-
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
         dayText.SetText(selectedDay.nameOfDay);
 
         resourceHolder.ResetForNextDay();
 
-        if (resourceHolder.employeesTotal == 0 && resourceHolder.workerCost > resourceHolder.cash)
+        if (resourceHolder.publicOpinion <= 0 || resourceHolder.employeesTotal == 0 && resourceHolder.workerCost > resourceHolder.cash)
         {
             gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
         }
@@ -76,6 +75,5 @@ public class DayHolder : MonoBehaviour
         {
             btnHireWorkersContainer.ShowButtons(resourceHolder.cash, resourceHolder.workerCost);
         }
-
     }
 }

@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class BtnChoice : MonoBehaviour
 {
-    private JobWorkForce jobWorkForce;
+    private ResourceHolder resourceHolder;
 
     private void Start()
     {
-        jobWorkForce = FindObjectOfType<JobWorkForce>();
+        resourceHolder = FindObjectOfType<ResourceHolder>();
     }
 
     public void ChoiceOne()
     {
-        jobWorkForce.WorkJob(JobChoice.fishing);
+        resourceHolder.AddActiveWorker(JobChoice.fishing);
     }
 
     public void ChoiceTwo()
     {
-        jobWorkForce.WorkJob(JobChoice.factory);
+        resourceHolder.AddActiveWorker(JobChoice.factory);
     }
 
     public void ChoiceThree()

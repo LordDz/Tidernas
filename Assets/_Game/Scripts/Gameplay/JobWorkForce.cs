@@ -53,16 +53,11 @@ public class JobWorkForce : MonoBehaviour
         }
 
         resourceHolder.cash += money;
-        resourceHolder.employeesUnEmployeed -= 1;
+
 
         resourceDisplay.textEmployees.SetText(resourceHolder.employeesUnEmployeed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
         resourceDisplay.textDeathCount.SetText(resourceHolder.nrOfDeaths.ToString());
         resourceDisplay.textCash.SetText(resourceHolder.cash.ToString());
         audioSource.Play();
-
-        if (resourceHolder.employeesUnEmployeed <= 0)
-        {
-            dayholder.NextDay();
-        }
     }
 }

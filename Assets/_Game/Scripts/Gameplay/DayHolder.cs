@@ -26,12 +26,15 @@ public class DayHolder : MonoBehaviour
 
     public InfoText dayText;
 
+    BtnChoiceContainer btnChoiceContainer;
+
 
 
     private void Awake()
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         gameStatus = FindObjectOfType<GameStatus>();
+        btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
     }
 
     private void Start()
@@ -61,6 +64,11 @@ public class DayHolder : MonoBehaviour
     private void SwitchToNextDay()
     {
         Debug.Log("Current day: " + currentDay);
+
+
+        resourceHolder.ResetForNextDay();
+        btnChoiceContainer.ShowButtons();
+
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
         dayText.SetText(selectedDay.nameOfDay);

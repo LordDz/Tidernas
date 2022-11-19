@@ -5,11 +5,7 @@ using UnityEngine.UI;
 
     public class Day : MonoBehaviour
     {
-        [SerializeField]
-        Image image;
-
-        [SerializeField]
-        int dayNr = 0;
+        public Sprite imageBackground;
 
 
     }

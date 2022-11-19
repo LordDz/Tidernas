@@ -8,6 +8,8 @@ public class BtnChoiceContainer : MonoBehaviour
     {
         btns = GetComponentsInChildren<BtnChoice>();
 
+        HideButtons();
+
     }
     public void ShowButtons()
     {

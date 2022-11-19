@@ -28,6 +28,7 @@ public class DayHolder : MonoBehaviour
 
     BtnChoiceContainer btnChoiceContainer;
 
+    BtnHireWorkersContainer btnHireWorkersContainer;
 
 
     private void Awake()
@@ -35,6 +36,7 @@ public class DayHolder : MonoBehaviour
         resourceHolder = FindObjectOfType<ResourceHolder>();
         gameStatus = FindObjectOfType<GameStatus>();
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
+        btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
     }
 
     private void Start()
@@ -50,14 +52,8 @@ public class DayHolder : MonoBehaviour
         {
             currentDay = 0;
             currentWeek++;
-
-            if (!resourceHolder.CheckIfStillAlive(currentWeek))
-            {
-                //YOU ARE DEAD NOW!
-                gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
-                return;
-            }
         }
+
         SwitchToNextDay();
     }
 
@@ -66,11 +62,20 @@ public class DayHolder : MonoBehaviour
         Debug.Log("Current day: " + currentDay);
 
 
-        resourceHolder.ResetForNextDay();
-        btnChoiceContainer.ShowButtons();
-
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
         dayText.SetText(selectedDay.nameOfDay);
+
+        resourceHolder.ResetForNextDay();
+
+        if (resourceHolder.employeesTotal == 0 && resourceHolder.workerCost > resourceHolder.cash)
+        {
+            gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
+        }
+        else
+        {
+            btnHireWorkersContainer.ShowButtons(resourceHolder.cash, resourceHolder.workerCost);
+        }
+
     }
 }

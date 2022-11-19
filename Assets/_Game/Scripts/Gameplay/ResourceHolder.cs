@@ -26,33 +26,16 @@ public class ResourceHolder : MonoBehaviour
     ResourceDisplay resourceDisplay;
     ReportsPage reportsPage;
 
-    [SerializeField]
-    BtnChoice btnHireWorker;
+    BtnHireWorkersContainer btnHireWorkersContainer;
 
     private void Start()
     {
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
         reportsPage = FindObjectOfType<ReportsPage>();
+        btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
 
         employeesUnEmployed = employeesTotal;
-    }
 
-    public bool CheckIfStillAlive(int week)
-    {
-        switch (week)
-        {
-            case 1:
-                return cash >= 25;
-            case 2:
-                return cash >= 50;
-            case 3:
-                return cash >= 75;
-            case 4:
-                return cash >= 100;
-            case 5:
-                return cash >= 125;
-        }
-        return false;
     }
 
     public void AddActiveWorker(JobChoice jobChoice)
@@ -72,11 +55,6 @@ public class ResourceHolder : MonoBehaviour
         listWorkers.Clear();
         employeesUnEmployed = employeesTotal;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
-
-        if (cash > workerCost)
-        {
-            btnHireWorker.EnableButton();
-        }
     }
 
     public void HireWorker()
@@ -91,7 +69,7 @@ public class ResourceHolder : MonoBehaviour
 
             if (cash < workerCost)
             {
-                btnHireWorker.DisableButton();
+                btnHireWorkersContainer.HideButtonWorker();
             }
         }
     }

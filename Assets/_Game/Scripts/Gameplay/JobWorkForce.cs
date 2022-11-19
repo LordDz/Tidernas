@@ -4,7 +4,6 @@ public class JobWorkForce : MonoBehaviour
 {
     ResourceHolder resourceHolder;
     ResourceDisplay resourceDisplay;
-    DayHolder dayholder;
 
     [SerializeField]
     private int cashFishing, cashFactory;
@@ -15,13 +14,10 @@ public class JobWorkForce : MonoBehaviour
     [SerializeField]
     AudioClip soundFishDeath, SoundFishWin, soundFactoryDeath, soundFactoryWin;
 
-
-
     private void Awake()
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
-        dayholder = FindObjectOfType<DayHolder>();
     }
 
     public void WorkJob(JobChoice jobChoice)
@@ -53,8 +49,6 @@ public class JobWorkForce : MonoBehaviour
         }
 
         resourceHolder.cash += money;
-
-
         resourceDisplay.textEmployees.SetText(resourceHolder.employeesUnEmployed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
         resourceDisplay.textDeathCount.SetText(resourceHolder.nrOfDeaths.ToString());
         resourceDisplay.textCash.SetText(resourceHolder.cash.ToString());

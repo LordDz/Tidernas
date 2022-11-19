@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class DayHolder : MonoBehaviour
 {
@@ -22,12 +24,17 @@ public class DayHolder : MonoBehaviour
     GameStatus gameStatus;
 
     [SerializeField]
-    Text dayText;
+    TextMeshProUGUI dayText;
 
     private void Awake()
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         gameStatus = FindObjectOfType<GameStatus>();
+    }
+
+    private void Start()
+    {
+        NextDay();
     }
 
     public void SelectChoice(int choice)
@@ -42,18 +49,13 @@ public class DayHolder : MonoBehaviour
         NextDay();
     }
 
-    private void Start()
-    {
-        NextDay();
-    }
-
     private void NextDay()
     {
         currentDay++;
 
-        if (currentDay > 7)
+        if (currentDay >= 7)
         {
-            currentDay = 1;
+            currentDay = 0;
             currentWeek++;
 
             if (!resourceHolder.CheckIfStillAlive(currentWeek))

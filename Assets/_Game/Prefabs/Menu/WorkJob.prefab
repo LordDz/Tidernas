@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450bce2f713625a41a0eddf5fbe1c896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashFishing: 2
-  cashFactory: 4
+  cashFishing: 1
+  cashFactory: 3
   audioSource: {fileID: 7932120187923940541}
   soundFishDeath: {fileID: 8300000, guid: 065a872881013d045b5775846004317d, type: 3}
   SoundFishWin: {fileID: 8300000, guid: 03ea32e16bbd9f4488ccff1159f33bf1, type: 3}

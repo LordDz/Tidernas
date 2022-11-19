@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class ResourceHolder : MonoBehaviour
 {
+    public int workerCost = 3;
+
     [SerializeField]
     public int cash;
 
     [SerializeField]
-    public int employeesUnEmployed, employeesTotal;
+    public int employeesTotal;
+
+    [HideInInspector]
+    public int employeesUnEmployed;
 
     [SerializeField]
     public int publicOpinion;
@@ -21,10 +26,15 @@ public class ResourceHolder : MonoBehaviour
     ResourceDisplay resourceDisplay;
     ReportsPage reportsPage;
 
+    [SerializeField]
+    BtnChoice btnHireWorker;
+
     private void Start()
     {
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
         reportsPage = FindObjectOfType<ReportsPage>();
+
+        employeesUnEmployed = employeesTotal;
     }
 
     public bool CheckIfStillAlive(int week)
@@ -62,5 +72,27 @@ public class ResourceHolder : MonoBehaviour
         listWorkers.Clear();
         employeesUnEmployed = employeesTotal;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
+
+        if (cash > workerCost)
+        {
+            btnHireWorker.EnableButton();
+        }
+    }
+
+    public void HireWorker()
+    {
+        if (cash >= workerCost)
+        {
+            cash -= workerCost;
+            employeesUnEmployed += 1;
+            employeesTotal += 1;
+            resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
+            resourceDisplay.textCash.SetText(cash.ToString());
+
+            if (cash < workerCost)
+            {
+                btnHireWorker.DisableButton();
+            }
+        }
     }
 }

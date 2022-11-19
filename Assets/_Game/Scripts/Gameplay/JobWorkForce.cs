@@ -29,10 +29,10 @@ public class JobWorkForce : MonoBehaviour
         switch (jobChoice)
         {
             case JobChoice.fishing:
-                DoWork(0.12f, cashFishing, soundFishDeath, SoundFishWin);
+                DoWork(0.25f, cashFishing, soundFishDeath, SoundFishWin);
                 break;
             case JobChoice.factory:
-                DoWork(0.18f, cashFishing, soundFishDeath, SoundFishWin);
+                DoWork(0.5f, cashFactory, soundFactoryDeath, soundFactoryWin);
                 break;
         }
     }

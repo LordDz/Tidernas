@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BtnChoice : MonoBehaviour
 {
     private ResourceHolder resourceHolder;
+    Button btn;
 
     private void Start()
     {
+        btn = GetComponent<Button>();
         resourceHolder = FindObjectOfType<ResourceHolder>();
     }
 
@@ -21,6 +24,19 @@ public class BtnChoice : MonoBehaviour
 
     public void ChoiceThree()
     {
-        //dayHolder.SelectChoice(3);
+        resourceHolder.HireWorker();
+    }
+
+    public void EnableButton()
+    {
+        btn ??= GetComponent<Button>();
+        btn.enabled = true;
+        btn.gameObject.SetActive(true);
+    }
+
+    public void DisableButton()
+    {
+        btn.enabled = false;
+        btn.gameObject.SetActive(false);
     }
 }

@@ -44,7 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33904fc97afa284ebb92308f99af165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 100
-  employees: 1
-  publicOpinion: 100
+  workerCost: 3
+  cash: 9
+  employeesUnEmployed: 0
+  employeesTotal: 6
+  publicOpinion: 10
   nrOfDeaths: 0
+  listWorkers: 
+  btnHireWorker: {fileID: 0}

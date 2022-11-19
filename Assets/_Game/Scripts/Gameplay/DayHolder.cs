@@ -11,7 +11,7 @@ public class DayHolder : MonoBehaviour
 
     [SerializeField]
     private int currentDay = -1;
-    public int currentWeek = -1;
+    public int currentWeek = 1;
     public int CurrentDay { get { return currentDay; } }
     private Day selectedDay = null;
 
@@ -25,7 +25,7 @@ public class DayHolder : MonoBehaviour
 
     GameStatus gameStatus;
 
-    public InfoText dayText;
+    public InfoText dayText, weekText;
 
     BtnHireWorkersContainer btnHireWorkersContainer;
 
@@ -62,6 +62,7 @@ public class DayHolder : MonoBehaviour
         selectedDay = listDays[currentDay];
         bg.sprite = selectedDay.imageBackground;
         dayText.SetText(selectedDay.nameOfDay);
+        weekText.SetText("Week " + currentWeek.ToString());
 
         resourceHolder.ResetForNextDay();
 

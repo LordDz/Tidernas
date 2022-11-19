@@ -23,3 +23,6 @@ Factory:
 Fishing boat:
 <a href="https://www.flaticon.com/free-icons/fishing-boat" title="fishing boat icons">Fishing boat icons created by Freepik - Flaticon</a>
 
+
+Rope:
+<a href="https://www.flaticon.com/free-icons/noose" title="noose icons">Noose icons created by max.icons - Flaticon</a>

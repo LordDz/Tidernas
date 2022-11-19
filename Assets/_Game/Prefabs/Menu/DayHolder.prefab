@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDay: -1
-  currentWeek: -1
+  currentWeek: 1
   listDays:
   - {fileID: 4447088214241992188}
   - {fileID: 4447088213146340360}
@@ -339,6 +339,7 @@ MonoBehaviour:
   - {fileID: 4447088214743425512}
   bg: {fileID: 0}
   dayText: {fileID: 0}
+  weekText: {fileID: 0}
 --- !u!1 &4447088214968988188
 GameObject:
   m_ObjectHideFlags: 0

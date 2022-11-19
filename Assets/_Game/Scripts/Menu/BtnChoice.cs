@@ -2,18 +2,25 @@ using UnityEngine;
 
 public class BtnChoice : MonoBehaviour
 {
-    [SerializeField]
     private DayHolder dayHolder;
 
-    public void ChoiceOne() {
+    private void Start()
+    {
+        dayHolder = FindObjectOfType<DayHolder>();
+    }
+
+    public void ChoiceOne()
+    {
         dayHolder.SelectChoice(1);
     }
 
-    public void ChoiceTwo() {
+    public void ChoiceTwo()
+    {
         dayHolder.SelectChoice(2);
     }
 
-    public void ChoiceThree() {
+    public void ChoiceThree()
+    {
         dayHolder.SelectChoice(3);
     }
 }

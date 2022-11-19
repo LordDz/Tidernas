@@ -507,19 +507,84 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2979873020409060433, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 882.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979873020409060433, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 493.325
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979873020409060433, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -141.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979873020409060433, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315358811840501629, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 825.252
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315358811840501629, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 110.541
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315358811840501629, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -151.91785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315358811840501629, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 252.739
+      objectReference: {fileID: 0}
     - target: {fileID: 5997574536567971528, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
       propertyPath: m_Name
       value: WorkersForHire
       objectReference: {fileID: 0}
+    - target: {fileID: 6248256572899940649, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 687
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248256572899940649, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832950159918073090, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7462483407674525351, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
       propertyPath: defaultName
       value: Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928996494778579391, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 632.497
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928996494778579391, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 520.711
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928996494778579391, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -155.966
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928996494778579391, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 57.658
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
 --- !u!4 &1138353567370801867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2096398184713929538, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
+  m_PrefabInstance: {fileID: 1358918871264440713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5478728403938391179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6832950159918073090, guid: c36d3d1b897e0594d9d5dd27f5f56ffe, type: 3}
   m_PrefabInstance: {fileID: 1358918871264440713}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2424937266491269320
@@ -917,6 +982,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2725999556752732647}
     m_Modifications:
+    - target: {fileID: 1520321896814850056, guid: 71bb872e05679d740a9e2a8e383f7dc7, type: 3}
+      propertyPath: workerInfoCard
+      value: 
+      objectReference: {fileID: 5478728403938391179}
     - target: {fileID: 4298810227693889504, guid: 71bb872e05679d740a9e2a8e383f7dc7, type: 3}
       propertyPath: m_Name
       value: ButtonsHireWorkersContainer

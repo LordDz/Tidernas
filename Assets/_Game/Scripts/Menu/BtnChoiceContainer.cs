@@ -7,7 +7,6 @@ public class BtnChoiceContainer : MonoBehaviour
     private void Start()
     {
         btns = GetComponentsInChildren<BtnChoice>();
-
         HideButtons();
 
     }

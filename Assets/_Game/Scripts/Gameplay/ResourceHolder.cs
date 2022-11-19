@@ -7,7 +7,7 @@ public class ResourceHolder : MonoBehaviour
     public int cash;
 
     [SerializeField]
-    public int employeesUnEmployeed, employeesTotal;
+    public int employeesUnEmployed, employeesTotal;
 
     [SerializeField]
     public int publicOpinion;
@@ -48,10 +48,10 @@ public class ResourceHolder : MonoBehaviour
     public void AddActiveWorker(JobChoice jobChoice)
     {
         listWorkers.Add(jobChoice);
-        employeesUnEmployeed -= 1;
-        resourceDisplay.textEmployees.SetText(employeesUnEmployeed.ToString() + " / " + employeesTotal.ToString());
+        employeesUnEmployed -= 1;
+        resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
 
-        if (employeesUnEmployeed <= 0)
+        if (employeesUnEmployed <= 0)
         {
             reportsPage.ShowReportPage();
         }
@@ -60,7 +60,7 @@ public class ResourceHolder : MonoBehaviour
     public void ResetForNextDay()
     {
         listWorkers.Clear();
-        employeesUnEmployeed = employeesTotal;
-        resourceDisplay.textEmployees.SetText(employeesUnEmployeed.ToString() + " / " + employeesTotal.ToString());
+        employeesUnEmployed = employeesTotal;
+        resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
     }
 }

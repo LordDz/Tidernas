@@ -8,7 +8,7 @@ public class ResourceDisplay : MonoBehaviour
     {
         ResourceHolder resourceHolder = FindObjectOfType<ResourceHolder>();
         textCash.SetText(resourceHolder.cash.ToString());
-        textEmployees.SetText(resourceHolder.employeesUnEmployeed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
+        textEmployees.SetText(resourceHolder.employeesUnEmployed.ToString() + " / " + resourceHolder.employeesTotal.ToString());
         textPublicOpinion.SetText(resourceHolder.publicOpinion.ToString());
         textDeathCount.SetText(resourceHolder.nrOfDeaths.ToString());
     }

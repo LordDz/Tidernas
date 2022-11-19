@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -289,8 +289,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -462,7 +462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8970876319098419572, guid: f18c24329927b9642bf682d94a330705, type: 3}
       propertyPath: bg
-      value: 
+      value:
       objectReference: {fileID: 2725999555863581798}
     - target: {fileID: 8970876319098419573, guid: f18c24329927b9642bf682d94a330705, type: 3}
       propertyPath: m_Name
@@ -629,8 +629,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f0facfb5a36ff418b022847d8d0263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!224 &2725999555229356664 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 654107988409851659, guid: 594f0c056d90c944b916def1486dddd9, type: 3}
@@ -769,7 +769,7 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3602048917077062862, guid: 3a2cd46a78869964db085c56e279083d, type: 3}
-      propertyPath: employeesUnEmployeed
+      propertyPath: employeesUnEmployed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3602048917077062863, guid: 3a2cd46a78869964db085c56e279083d, type: 3}
@@ -906,15 +906,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4447088214928789256, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: bg
-      value: 
+      value:
       objectReference: {fileID: 2725999555863581798}
     - target: {fileID: 4447088214928789256, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: dayText
-      value: 
+      value:
       objectReference: {fileID: 1996676680099828159}
     - target: {fileID: 4447088214928789256, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: gameStatus
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 4447088214928789257, guid: c56d18081aeb07f479ec2c004fdf2d46, type: 3}
       propertyPath: m_RootOrder

@@ -54,7 +54,7 @@ public class DayHolder : MonoBehaviour
             if (!resourceHolder.CheckIfStillAlive(currentWeek))
             {
                 //YOU ARE DEAD NOW!
-                gameStatus.EndGame(resourceHolder.nrOfDeaths);
+                gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
                 return;
             }
         }

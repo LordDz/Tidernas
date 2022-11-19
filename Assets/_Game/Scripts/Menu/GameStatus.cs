@@ -25,7 +25,7 @@ public class GameStatus : MonoBehaviour
         textEndScreen.gameObject.SetActive(false);
     }
 
-    public void EndGame(int nrOfDeaths)
+    public void EndGame(int nrOfDeaths, int employeesTotal)
     {
         btnChoiceContainer.HideButtons();
         bg.sprite = kills10;
@@ -37,8 +37,27 @@ public class GameStatus : MonoBehaviour
 
         if (textEndScreen != null)
         {
+            // Death Scene
             textEndScreen.gameObject.SetActive(true);
-            textEndScreen.SetText("You lost " + nrOfDeaths + " employees, but it was totally worth it!");
+            string message = "";
+            int deathRatio = (nrOfDeaths / (nrOfDeaths + employeesTotal)) * 100;
+            if (nrOfDeaths == 0)
+            {
+                message = "You lost and all workers lived. What were you thinking?!";
+            }
+            else if (deathRatio >= 1 && deathRatio < 25)
+            {
+                message = "You lost, no wonder. Poor use of resources.";
+            }
+            else if (deathRatio >= 75 && deathRatio < 100)
+            {
+                message = "You lost but at least you had use of your resources.";
+            }
+            else
+            {
+                message = "Sure, you lost, but at least you spent every last resource.";
+            }
+            textEndScreen.SetText(message);
         }
     }
 }

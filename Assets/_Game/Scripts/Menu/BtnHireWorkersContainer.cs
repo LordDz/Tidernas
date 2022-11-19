@@ -31,6 +31,7 @@ public class BtnHireWorkersContainer : MonoBehaviour
     {
         btnStart.gameObject.SetActive(false);
         btnHireWorker.gameObject.SetActive(false);
+        workerInfoCard.SetActive(false);
     }
 
     public void HideButtonWorker()

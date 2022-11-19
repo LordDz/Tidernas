@@ -27,8 +27,6 @@ public class DayHolder : MonoBehaviour
 
     public InfoText dayText;
 
-    BtnChoiceContainer btnChoiceContainer;
-
     BtnHireWorkersContainer btnHireWorkersContainer;
 
 
@@ -36,7 +34,6 @@ public class DayHolder : MonoBehaviour
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         gameStatus = FindObjectOfType<GameStatus>();
-        btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
     }
 
@@ -68,8 +65,9 @@ public class DayHolder : MonoBehaviour
 
         resourceHolder.ResetForNextDay();
 
-        if (resourceHolder.publicOpinion <= 0 || resourceHolder.employeesTotal == 0 && resourceHolder.workerCost > resourceHolder.cash)
+        if (resourceHolder.publicOpinion <= 0 || resourceHolder.employeesTotal <= 0 && resourceHolder.workerCost > resourceHolder.cash)
         {
+            Debug.Log("END GAME!!!");
             gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
         }
         else

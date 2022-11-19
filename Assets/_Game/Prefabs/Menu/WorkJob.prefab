@@ -56,14 +56,14 @@ MonoBehaviour:
   soundFishWin02: {fileID: 8300000, guid: 4c0f27dc381e5f34ebe1ddc5985425be, type: 3}
   soundFishWin03: {fileID: 8300000, guid: 9f8572be07ad3cc42a14b04e34a7955f, type: 3}
   soundFishWin04: {fileID: 8300000, guid: 8834ffdcd939a1642991c6db4d85d37e, type: 3}
-  soundFactoryDeath01: {fileID: 8300000, guid: 1b47c9cbb7fed264db7f8c37923bd8dc, type: 3}
-  soundFactoryDeath02: {fileID: 8300000, guid: 1b47c9cbb7fed264db7f8c37923bd8dc, type: 3}
-  soundFactoryDeath03: {fileID: 8300000, guid: 1b47c9cbb7fed264db7f8c37923bd8dc, type: 3}
-  soundFactoryDeath04: {fileID: 8300000, guid: 1b47c9cbb7fed264db7f8c37923bd8dc, type: 3}
-  soundFactoryWin01: {fileID: 8300000, guid: ff36bb73d2cb41f40b8518e99d4b4c82, type: 3}
-  soundFactoryWin02: {fileID: 8300000, guid: ff36bb73d2cb41f40b8518e99d4b4c82, type: 3}
-  soundFactoryWin03: {fileID: 8300000, guid: ff36bb73d2cb41f40b8518e99d4b4c82, type: 3}
-  soundFactoryWin04: {fileID: 8300000, guid: ff36bb73d2cb41f40b8518e99d4b4c82, type: 3}
+  soundFactoryDeath01: {fileID: 8300000, guid: 32195cedc313df542acca3d02ff6e377, type: 3}
+  soundFactoryDeath02: {fileID: 8300000, guid: 8a9efb838752078459f9ca9e960e0c95, type: 3}
+  soundFactoryDeath03: {fileID: 8300000, guid: 229da552bd393f04f9cfcfff186c5137, type: 3}
+  soundFactoryDeath04: {fileID: 8300000, guid: d815c347ea975f940af99833da6ae979, type: 3}
+  soundFactoryWin01: {fileID: 8300000, guid: b0ace92cabd892748b68fc64020ce3f9, type: 3}
+  soundFactoryWin02: {fileID: 8300000, guid: a83bb70dfbfaa124990eee5dc66923df, type: 3}
+  soundFactoryWin03: {fileID: 8300000, guid: 3baa81f9d6ee3704290698e943d38c74, type: 3}
+  soundFactoryWin04: {fileID: 8300000, guid: 4a085ea55f5f2f047b916f9afbe1bd86, type: 3}
 --- !u!82 &7932120187923940541
 AudioSource:
   m_ObjectHideFlags: 0

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workerCost: 8
   cash: 9
-  employeesTotal: 6
+  employeesTotal: 2
   employeesUnEmployed: 0
-  publicOpinion: 3
+  publicOpinion: 1
   nrOfDeaths: 0
   listWorkers: 

@@ -26,6 +26,7 @@ public class GameStatus : MonoBehaviour
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
+        highScoreHandler = FindObjectOfType<HighScoreHandler>();
         textEndScreen.gameObject.SetActive(false);
     }
 

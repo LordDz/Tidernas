@@ -12,22 +12,33 @@ public class GameStatus : MonoBehaviour
     Sprite kills10, kills20, kills30, kills40, kills50;
 
     [SerializeField]
-    TextMeshProUGUI textEndScreen;
+    InfoText textEndScreen;
 
     BtnChoiceContainer btnChoiceContainer;
+
+    ResourceDisplay resourceDisplay;
 
     private void Awake()
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
+        resourceDisplay = FindObjectOfType<ResourceDisplay>();
+        textEndScreen.gameObject.SetActive(false);
     }
 
     public void EndGame(int nrOfDeaths)
     {
         btnChoiceContainer.HideButtons();
+        bg.sprite = kills10;
+
+        if (resourceDisplay != null)
+        {
+            resourceDisplay.gameObject.SetActive(false);
+        }
+
         if (textEndScreen != null)
         {
-            textEndScreen.text = "You lost " + nrOfDeaths + " employees, but it was totally worth it!";
+            textEndScreen.gameObject.SetActive(true);
+            textEndScreen.SetText("You lost " + nrOfDeaths + " employees, but it was totally worth it!");
         }
-        bg.sprite = kills10;
     }
 }

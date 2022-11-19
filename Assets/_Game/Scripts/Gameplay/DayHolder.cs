@@ -26,6 +26,8 @@ public class DayHolder : MonoBehaviour
 
     public InfoText dayText;
 
+
+
     private void Awake()
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
@@ -37,19 +39,7 @@ public class DayHolder : MonoBehaviour
         NextDay();
     }
 
-    public void SelectChoice(int choice)
-    {
-        switch (choice)
-        {
-            case 1:
-                break;
-            default:
-                break;
-        }
-        NextDay();
-    }
-
-    private void NextDay()
+    public void NextDay()
     {
         currentDay++;
 

@@ -10,7 +10,7 @@ public class HighScoreHandler : MonoBehaviour
     Player player;
 
     [SerializeField]
-    InfoText scoreValueText, scoreMessage, title;
+    InfoText scoreValueText, scoreMessage, titleText;
 
     [SerializeField]
     TextMeshProUGUI fameText;
@@ -20,7 +20,7 @@ public class HighScoreHandler : MonoBehaviour
         resourceHolder = FindObjectOfType<ResourceHolder>();
         dayHolder = FindObjectOfType<DayHolder>();
         player = FindObjectOfType<Player>();
-        title.gameObject.SetActive(false);
+        titleText.gameObject.SetActive(false);
         fameText.gameObject.SetActive(false);
         scoreValueText.gameObject.SetActive(false);
         scoreMessage.gameObject.SetActive(false);
@@ -64,7 +64,7 @@ public class HighScoreHandler : MonoBehaviour
         }
         scoreValueText.SetText(score.ToString() + " fame");
         scoreMessage.SetText(message);
-        title.gameObject.SetActive(true);
+        titleText.gameObject.SetActive(true);
         fameText.gameObject.SetActive(true);
         scoreValueText.gameObject.SetActive(true);
         scoreMessage.gameObject.SetActive(true);

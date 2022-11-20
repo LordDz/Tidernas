@@ -185,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValueText: {fileID: 4766205508126710845}
   scoreMessage: {fileID: 6130957166074064741}
-  title: {fileID: 6231200384252734312}
+  titleText: {fileID: 6231200384252734312}
   fameText: {fileID: 8595218010666331249}
 --- !u!1001 &6951125409094627699
 PrefabInstance:

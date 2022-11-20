@@ -172,6 +172,18 @@ PrefabInstance:
       propertyPath: m_text
       value: 100%
       objectReference: {fileID: 0}
+    - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7341797515437848523, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 282.403

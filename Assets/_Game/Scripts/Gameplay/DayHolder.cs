@@ -69,7 +69,7 @@ public class DayHolder : MonoBehaviour
         if (resourceHolder.publicOpinion <= 0 || resourceHolder.employeesTotal <= 0 && resourceHolder.workerCost > resourceHolder.cash)
         {
             Debug.Log("END GAME!!!");
-            gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
+            EndGame();
         }
         else
         {
@@ -95,5 +95,10 @@ public class DayHolder : MonoBehaviour
                 return 100;
         }
         return 100;
+    }
+
+    public void EndGame()
+    {
+        gameStatus.EndGame(resourceHolder.nrOfDeaths, resourceHolder.employeesTotal);
     }
 }

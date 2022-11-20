@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548832372386686456, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_Name
-      value: ActionButton
+      value: ActionButtonFishing
       objectReference: {fileID: 0}
     - target: {fileID: 4087128448229384264, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -379,7 +379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChoiceOne
+      value: ChoiceAddWorkerToFishing
       objectReference: {fileID: 0}
     - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -436,7 +436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2548832372386686456, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_Name
-      value: ActionButton (1)
+      value: ActionButtonFactory
       objectReference: {fileID: 0}
     - target: {fileID: 5532164351246388700, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_Pivot.x
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChoiceTwo
+      value: ChoiceAddWorkerToFishing
       objectReference: {fileID: 0}
     - target: {fileID: 6861640657556921879, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

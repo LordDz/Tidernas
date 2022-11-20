@@ -4,6 +4,7 @@ using UnityEngine;
 public class ResourceHolder : MonoBehaviour
 {
     public int workerCost = 3;
+    public int workerFindCost = 1;
 
     [SerializeField]
     public int cash;
@@ -72,6 +73,25 @@ public class ResourceHolder : MonoBehaviour
             resourceDisplay.textCash.SetText(cash.ToString());
 
             workersForHire.AddNewWorker(nextWorker);
+            nextWorker = workersForHire.GetWorkerInfo();
+
+            if (cash < workerCost)
+            {
+                btnHireWorkersContainer.HideButtonWorker();
+            }
+        }
+    }
+
+    public void FindNewWorker()
+    {
+        Debug.Log("find worker!?" + workerFindCost);
+        Debug.Log("cash after" + cash);
+        if (cash >= workerFindCost)
+        {
+            cash -= workerFindCost;
+            resourceDisplay.textCash.SetText(cash.ToString());
+
+            //workersForHire.AddNewWorker(nextWorker);
             nextWorker = workersForHire.GetWorkerInfo();
 
             if (cash < workerCost)

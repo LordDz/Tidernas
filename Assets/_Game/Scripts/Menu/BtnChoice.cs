@@ -12,19 +12,25 @@ public class BtnChoice : MonoBehaviour
         resourceHolder = FindObjectOfType<ResourceHolder>();
     }
 
-    public void ChoiceOne()
+    public void ChoiceAddWorkerToFishing()
     {
         resourceHolder.AddActiveWorker(JobChoice.fishing);
     }
 
-    public void ChoiceTwo()
+    public void ChoiceAddWorkerToFactory()
     {
         resourceHolder.AddActiveWorker(JobChoice.factory);
     }
 
-    public void ChoiceThree()
+    public void ChoiceWorkerHire()
     {
         resourceHolder.HireWorker();
+    }
+
+    public void ChoiceWorkerFindNew()
+    {
+        Debug.Log("FIND NEW WORKER CLICKED ON!?");
+        resourceHolder.FindNewWorker();
     }
 
     public void EnableButton()

@@ -3,7 +3,7 @@
 public class BtnHireWorkersContainer : MonoBehaviour
 {
     [SerializeField]
-    private BtnChoice btnStart, btnHireWorker;
+    private BtnChoice btnStart, btnHireWorker, btnFindWorker;
 
     [SerializeField]
     GameObject workerInfoCard;
@@ -23,6 +23,7 @@ public class BtnHireWorkersContainer : MonoBehaviour
         if (canShowWorker)
         {
             btnHireWorker.gameObject.SetActive(true);
+            btnFindWorker.gameObject.SetActive(true);
             workerInfoCard.SetActive(true);
         }
     }
@@ -31,12 +32,14 @@ public class BtnHireWorkersContainer : MonoBehaviour
     {
         btnStart.gameObject.SetActive(false);
         btnHireWorker.gameObject.SetActive(false);
+        btnFindWorker.gameObject.SetActive(false);
         workerInfoCard.SetActive(false);
     }
 
     public void HideButtonWorker()
     {
         btnHireWorker.gameObject.SetActive(false);
+        btnFindWorker.gameObject.SetActive(false);
         workerInfoCard.SetActive(false);
     }
 

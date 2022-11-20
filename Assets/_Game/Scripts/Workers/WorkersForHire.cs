@@ -29,6 +29,8 @@ public class WorkersForHire : MonoBehaviour
 
     public WorkerInfo GetWorker(int index)
     {
+        Debug.Log("GetWorker with index: " + index);
+        Debug.Log("listWorkers.count: " + listWorkers.Count);
         return listWorkers[index];
     }
 

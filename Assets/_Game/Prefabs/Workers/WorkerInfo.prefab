@@ -306,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192725520035722711, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_text
-      value: Sven Goran
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192725520035722711, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_text
-      value: Sven Goran
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
@@ -668,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8192725520035722711, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_text
-      value: Sven Goran
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}

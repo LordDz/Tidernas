@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ResourceHolder : MonoBehaviour
@@ -32,15 +33,20 @@ public class ResourceHolder : MonoBehaviour
 
     WorkersForHire workersForHire;
     WorkerInfo nextWorker;
+    JobWorkForce jobWorkForce;
 
     [SerializeField]
     GameObject workerInfoCard;
+
+    [SerializeField]
+    TextMeshProUGUI textAssignFishing, textAssignFactory;
 
     private void Start()
     {
         reportsPage = FindObjectOfType<ReportsPage>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
         workersForHire = FindObjectOfType<WorkersForHire>();
+        jobWorkForce = FindObjectOfType<JobWorkForce>();
 
         employeesUnEmployed = employeesTotal;
         nextWorker = workersForHire.GetWorkerInfo();
@@ -54,6 +60,12 @@ public class ResourceHolder : MonoBehaviour
 
         WorkerInfo workerToShow = workersForHire.GetWorker(employeesUnEmployed);
         workersForHire.ShowWorkerInfo(workerToShow);
+        float maxChanceFishing = jobWorkForce.GetMaxChance(JobChoice.fishing, workerToShow) * 100;
+        float maxChanceFactory = jobWorkForce.GetMaxChance(JobChoice.factory, workerToShow) * 100;
+
+        textAssignFishing.text = (maxChanceFishing + "%");
+        textAssignFactory.text = (maxChanceFactory + "%");
+
         workerInfoCard.SetActive(true);
 
         if (employeesUnEmployed <= 0)
@@ -93,7 +105,6 @@ public class ResourceHolder : MonoBehaviour
     {
         if (cash >= workerFindCost)
         {
-            Debug.Log("FIND NEW WORKER?!");
             cash -= workerFindCost;
             resourceDisplay.textCash.SetText(cash.ToString());
 

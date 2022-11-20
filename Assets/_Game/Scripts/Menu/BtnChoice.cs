@@ -29,7 +29,6 @@ public class BtnChoice : MonoBehaviour
 
     public void ChoiceWorkerFindNew()
     {
-        Debug.Log("FIND NEW WORKER CLICKED ON!?");
         resourceHolder.FindNewWorker();
     }
 

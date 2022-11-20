@@ -12,7 +12,7 @@ public class HighScoreHandler : MonoBehaviour
     Player player;
 
     [SerializeField]
-    InfoText scoreValueText, scoreMessage, titleText;
+    InfoText scoreValueText, scoreMessage;
 
     [SerializeField]
     TextMeshProUGUI fameText;
@@ -21,7 +21,7 @@ public class HighScoreHandler : MonoBehaviour
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         dayHolder = FindObjectOfType<DayHolder>();
-        titleText.gameObject.SetActive(false);
+        player = FindObjectOfType<Player>();
         fameText.gameObject.SetActive(false);
         scoreValueText.gameObject.SetActive(false);
         scoreMessage.gameObject.SetActive(false);
@@ -48,8 +48,7 @@ public class HighScoreHandler : MonoBehaviour
 
     private string GetKey()
     {
-        return player.playerName.ToLower().Replace(" ", "-");
-        // name = String.Concat(name.Where(c => !Char.IsWhiteSpace(c)));
+        return player.name.ToLower().Replace(" ", "-");
     }
 
     public void ShowHighScore(string key, int score, bool isNew)
@@ -57,7 +56,7 @@ public class HighScoreHandler : MonoBehaviour
         string message;
         if (isNew)
         {
-            message = "You did it! " + score.ToString() + " is your new personal best, well done.";
+            message = "You did it! " + score.ToString() + " is your new personal best, well done!";
         }
         else
         {
@@ -65,7 +64,6 @@ public class HighScoreHandler : MonoBehaviour
         }
         scoreValueText.SetText(score.ToString());
         scoreMessage.SetText(message);
-        titleText.gameObject.SetActive(true);
         fameText.gameObject.SetActive(true);
         scoreValueText.gameObject.SetActive(true);
         scoreMessage.gameObject.SetActive(true);

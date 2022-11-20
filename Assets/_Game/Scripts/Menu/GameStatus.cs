@@ -78,6 +78,7 @@ public class GameStatus : MonoBehaviour
                 message = "Sure, you lost, but at least you spent every last resource.";
             }
             textEndScreen.SetText(message);
+            textEndScreen.gameObject.SetActive(false); //TODO: Fix message
         }
 
     }

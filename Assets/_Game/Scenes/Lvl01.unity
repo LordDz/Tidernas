@@ -1311,6 +1311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 466078117293012867, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1002445673199963529, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
       propertyPath: m_Name
       value: GameMusic

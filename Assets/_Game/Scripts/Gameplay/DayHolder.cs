@@ -35,10 +35,13 @@ public class DayHolder : MonoBehaviour
         resourceHolder = FindObjectOfType<ResourceHolder>();
         gameStatus = FindObjectOfType<GameStatus>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
+
+        Debug.Log("Day awake");
     }
 
     private void Start()
     {
+        Debug.Log("Day start");
         NextDay();
     }
 

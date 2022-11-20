@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ResourceHolder : MonoBehaviour
@@ -24,6 +25,7 @@ public class ResourceHolder : MonoBehaviour
     [HideInInspector]
     public List<JobChoice> listActiveWorkers = new List<JobChoice>();
 
+    [SerializeField]
     ResourceDisplay resourceDisplay;
     ReportsPage reportsPage;
 
@@ -31,13 +33,20 @@ public class ResourceHolder : MonoBehaviour
 
     WorkersForHire workersForHire;
     WorkerInfo nextWorker;
+    JobWorkForce jobWorkForce;
+
+    [SerializeField]
+    GameObject workerInfoCard;
+
+    [SerializeField]
+    TextMeshProUGUI textAssignFishing, textAssignFactory;
 
     private void Start()
     {
-        resourceDisplay = FindObjectOfType<ResourceDisplay>();
         reportsPage = FindObjectOfType<ReportsPage>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
         workersForHire = FindObjectOfType<WorkersForHire>();
+        jobWorkForce = FindObjectOfType<JobWorkForce>();
 
         employeesUnEmployed = employeesTotal;
         nextWorker = workersForHire.GetWorkerInfo();
@@ -48,6 +57,16 @@ public class ResourceHolder : MonoBehaviour
         listActiveWorkers.Add(jobChoice);
         employeesUnEmployed -= 1;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
+
+        WorkerInfo workerToShow = workersForHire.GetWorker(employeesUnEmployed);
+        workersForHire.ShowWorkerInfo(workerToShow);
+        float maxChanceFishing = jobWorkForce.GetMaxChance(JobChoice.fishing, workerToShow) * 100;
+        float maxChanceFactory = jobWorkForce.GetMaxChance(JobChoice.factory, workerToShow) * 100;
+
+        textAssignFishing.text = (maxChanceFishing + "%");
+        textAssignFactory.text = (maxChanceFactory + "%");
+
+        workerInfoCard.SetActive(true);
 
         if (employeesUnEmployed <= 0)
         {
@@ -73,19 +92,17 @@ public class ResourceHolder : MonoBehaviour
             resourceDisplay.textCash.SetText(cash.ToString());
 
             workersForHire.AddNewWorker(nextWorker);
-            nextWorker = workersForHire.GetWorkerInfo();
+            btnHireWorkersContainer.HideButtonHireWorker();
 
             if (cash < workerCost)
             {
-                btnHireWorkersContainer.HideButtonWorker();
+                btnHireWorkersContainer.HideButtonFindWorker();
             }
         }
     }
 
     public void FindNewWorker()
     {
-        Debug.Log("find worker!?" + workerFindCost);
-        Debug.Log("cash after" + cash);
         if (cash >= workerFindCost)
         {
             cash -= workerFindCost;
@@ -93,10 +110,16 @@ public class ResourceHolder : MonoBehaviour
 
             //workersForHire.AddNewWorker(nextWorker);
             nextWorker = workersForHire.GetWorkerInfo();
+            workerInfoCard.SetActive(true);
 
             if (cash < workerCost)
             {
-                btnHireWorkersContainer.HideButtonWorker();
+                btnHireWorkersContainer.HideButtonFindWorker();
+                btnHireWorkersContainer.HideButtonHireWorker();
+            }
+            else
+            {
+                btnHireWorkersContainer.ShowButtons(cash, workerCost);
             }
         }
     }

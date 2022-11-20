@@ -10,9 +10,16 @@ public class BtnHireWorkersContainer : MonoBehaviour
 
     private BtnChoiceContainer btnChoiceContainer;
 
+    ResourceHolder resourceHolder;
+    WorkersForHire workersForHire;
+
+
+
     private void Start()
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
+        resourceHolder = FindObjectOfType<ResourceHolder>();
+        workersForHire = FindObjectOfType<WorkersForHire>();
     }
 
     public void ShowButtons(int cash, int workerCost)
@@ -36,7 +43,13 @@ public class BtnHireWorkersContainer : MonoBehaviour
         workerInfoCard.SetActive(false);
     }
 
-    public void HideButtonWorker()
+    public void HideButtonHireWorker()
+    {
+        btnHireWorker.gameObject.SetActive(false);
+        workerInfoCard.SetActive(false);
+    }
+
+    public void HideButtonFindWorker()
     {
         btnHireWorker.gameObject.SetActive(false);
         btnFindWorker.gameObject.SetActive(false);
@@ -47,5 +60,12 @@ public class BtnHireWorkersContainer : MonoBehaviour
     {
         HideButtons();
         btnChoiceContainer.ShowButtons();
+
+        if (workersForHire.ListNames.Count > 0)
+        {
+            WorkerInfo workerToShow = workersForHire.GetWorker(0);
+            workersForHire.ShowWorkerInfo(workerToShow);
+            workerInfoCard.SetActive(true);
+        }
     }
 }

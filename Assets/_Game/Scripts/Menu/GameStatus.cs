@@ -22,6 +22,9 @@ public class GameStatus : MonoBehaviour
     AudioSource musicMain, musicEnd;
     HighScoreHandler highScoreHandler;
 
+    [SerializeField]
+    GameObject workInfoCard;
+
     private void Awake()
     {
         btnChoiceContainer = FindObjectOfType<BtnChoiceContainer>();
@@ -47,6 +50,7 @@ public class GameStatus : MonoBehaviour
             int highScore = highScoreHandler.GetScore();
 
             textEndScreen.gameObject.SetActive(true);
+            workInfoCard.SetActive(false);
             string message = "";
             int possibleDeaths = nrOfDeaths + employeesTotal;
             float deathRatio = (nrOfDeaths / (nrOfDeaths + employeesTotal)) * 100;

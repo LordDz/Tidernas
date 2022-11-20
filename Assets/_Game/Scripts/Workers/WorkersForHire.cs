@@ -17,7 +17,7 @@ public class WorkersForHire : MonoBehaviour
     List<WorkerInfo> listWorkers = new List<WorkerInfo>();
 
     [SerializeField]
-    InfoText personText;
+    InfoText personText, skillFishing, skillFactory, skillTired;
 
     [SerializeField]
     Image personImage;
@@ -26,11 +26,10 @@ public class WorkersForHire : MonoBehaviour
     {
         listWorkers.Add(worker);
     }
-
     public WorkerInfo GetWorker(int index)
     {
-        Debug.Log("GetWorker with index: " + index);
-        Debug.Log("listWorkers.count: " + listWorkers.Count);
+        //Debug.Log("GetWorker with index: " + index);
+        //Debug.Log("listWorkers.count: " + listWorkers.Count);
         return listWorkers[index];
     }
 
@@ -56,8 +55,32 @@ public class WorkersForHire : MonoBehaviour
         }
 
         WorkerInfo workerInfo = new(personName, personSprite);
-        personText.SetText(personName);
-        personImage.sprite = personSprite;
+        ShowWorkerInfo(workerInfo);
         return workerInfo;
+    }
+
+    public void ShowWorkerInfo(WorkerInfo workerInfo)
+    {
+        personText.SetText(workerInfo.personName);
+        personImage.sprite = workerInfo.personPicture;
+
+        skillFishing.SetText(workerInfo.skillFish.ToString());
+        skillFactory.SetText(workerInfo.skillFactory.ToString());
+        skillTired.SetText(workerInfo.skillTired.ToString());
+
+        personImage.gameObject.SetActive(true);
+        personText.gameObject.SetActive(true);
+        skillFishing.gameObject.SetActive(true);
+        skillFactory.gameObject.SetActive(true);
+        skillTired.gameObject.SetActive(true);
+    }
+
+    public void HideWorkerInfo()
+    {
+        personImage.gameObject.SetActive(false);
+        personText.gameObject.SetActive(false);
+        skillFishing.gameObject.SetActive(false);
+        skillFactory.gameObject.SetActive(false);
+        skillTired.gameObject.SetActive(false);
     }
 }

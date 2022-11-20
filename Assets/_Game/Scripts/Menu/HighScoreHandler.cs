@@ -7,6 +7,8 @@ public class HighScoreHandler : MonoBehaviour
 {
     ResourceHolder resourceHolder;
     DayHolder dayHolder;
+
+    [SerializeField]
     Player player;
 
     [SerializeField]
@@ -19,7 +21,6 @@ public class HighScoreHandler : MonoBehaviour
     {
         resourceHolder = FindObjectOfType<ResourceHolder>();
         dayHolder = FindObjectOfType<DayHolder>();
-        player = FindObjectOfType<Player>();
         titleText.gameObject.SetActive(false);
         fameText.gameObject.SetActive(false);
         scoreValueText.gameObject.SetActive(false);
@@ -47,7 +48,7 @@ public class HighScoreHandler : MonoBehaviour
 
     private string GetKey()
     {
-        return player.name.ToLower().Replace(" ", "-");
+        return player.playerName.ToLower().Replace(" ", "-");
         // name = String.Concat(name.Where(c => !Char.IsWhiteSpace(c)));
     }
 

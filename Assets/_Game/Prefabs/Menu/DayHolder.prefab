@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: 4fe187d83cc44ca4db4fa47f4c8f3f07, type: 3}
+  imageBackground: {fileID: 21300000, guid: cdbea75275424b044b207d6a8f4c9807, type: 3}
   nameOfDay: Tuesday
 --- !u!1 &4447088214209362782
 GameObject:
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: 0a0391b7211cb19489d297bad3e43eb4, type: 3}
+  imageBackground: {fileID: 21300000, guid: 841abf8fbe14e314fb457656b5f60cf4, type: 3}
   nameOfDay: Friday
 --- !u!1 &4447088214241992186
 GameObject:
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: bddfd33501d53944a85434759616f388, type: 3}
+  imageBackground: {fileID: 21300000, guid: 3bcebbbd5ebe11f448cf002e82479ddd, type: 3}
   nameOfDay: Monday
 --- !u!1 &4447088214331571420
 GameObject:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: 7f3dc85de48fd6f4fa2bc493b4d204bd, type: 3}
+  imageBackground: {fileID: 21300000, guid: 20e5aaa4a2039a94e82ad12cb2d8cb34, type: 3}
   nameOfDay: Wednesday
 --- !u!1 &4447088214331769559
 GameObject:
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: 1df2b0a28ac316f4d918ac254448d5b8, type: 3}
+  imageBackground: {fileID: 21300000, guid: 836200c03a3868a4b8559b0280a5ac2e, type: 3}
   nameOfDay: Saturday
 --- !u!1 &4447088214743425526
 GameObject:
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: 283c22a24155f0846b14b6c9e0b19e1a, type: 3}
+  imageBackground: {fileID: 21300000, guid: 116269a57e6d5a346b338a9d2524fff0, type: 3}
   nameOfDay: Sunday
 --- !u!1 &4447088214928789270
 GameObject:
@@ -384,5 +384,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e686706da3ace4985696059b28f325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageBackground: {fileID: 21300000, guid: b1a1f32f69a531942a05d98b45c6a61c, type: 3}
+  imageBackground: {fileID: 21300000, guid: 9e72a6bf15105944694345223ef3ebc8, type: 3}
   nameOfDay: Thursday

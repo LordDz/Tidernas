@@ -96,20 +96,18 @@ public class ReportsPage : MonoBehaviour
     private void DoWork()
     {
         JobChoice workerJob = resourceHolder.listActiveWorkers[index];
-        var worker = workersForHire.GetWorker(index);
-
+        WorkerInfo worker = workersForHire.GetWorker(index);
         Sprite workSprite = workerJob == JobChoice.fishing ? spriteFisher : spriteFactory;
 
         workersForHire.ShowWorkerInfo(worker);
-        bool isSuccessful = jobWorkForce.WorkJob(workerJob);
+        bool isSuccessful = jobWorkForce.WorkJob(workerJob, worker);
         var jobText = workerJob == JobChoice.fishing ? "Fishing" : "Factory";
         string workText = isSuccessful ? jobText : " DEAD";
-        Debug.Log("workText: " + workText);
 
         textWorkerJob.SetText(workText);
         textWorkerJob.SetIcon(workSprite);
-        textWorkerJob.gameObject.SetActive(true);
         workerInfoCard.SetActive(true);
+        textWorkerJob.gameObject.SetActive(true);
 
         cooldown = timePerWorker;
         index++;

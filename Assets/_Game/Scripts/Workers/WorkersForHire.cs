@@ -17,7 +17,7 @@ public class WorkersForHire : MonoBehaviour
     List<WorkerInfo> listWorkers = new List<WorkerInfo>();
 
     [SerializeField]
-    InfoText personText;
+    InfoText personText, skillFishing, skillFactory, skillTired;
 
     [SerializeField]
     Image personImage;
@@ -55,8 +55,7 @@ public class WorkersForHire : MonoBehaviour
         }
 
         WorkerInfo workerInfo = new(personName, personSprite);
-        personText.SetText(personName);
-        personImage.sprite = personSprite;
+        ShowWorkerInfo(workerInfo);
         return workerInfo;
     }
 
@@ -65,13 +64,23 @@ public class WorkersForHire : MonoBehaviour
         personText.SetText(workerInfo.personName);
         personImage.sprite = workerInfo.personPicture;
 
+        skillFishing.SetText(workerInfo.skillFish.ToString());
+        skillFactory.SetText(workerInfo.skillFactory.ToString());
+        skillTired.SetText(workerInfo.skillTired.ToString());
+
         personImage.gameObject.SetActive(true);
         personText.gameObject.SetActive(true);
+        skillFishing.gameObject.SetActive(true);
+        skillFactory.gameObject.SetActive(true);
+        skillTired.gameObject.SetActive(true);
     }
 
     public void HideWorkerInfo()
     {
         personImage.gameObject.SetActive(false);
         personText.gameObject.SetActive(false);
+        skillFishing.gameObject.SetActive(false);
+        skillFactory.gameObject.SetActive(false);
+        skillTired.gameObject.SetActive(false);
     }
 }

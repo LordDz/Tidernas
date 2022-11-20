@@ -29,23 +29,39 @@ public class JobWorkForce : MonoBehaviour
         resourceDisplay = FindObjectOfType<ResourceDisplay>();
     }
 
-    public bool WorkJob(JobChoice jobChoice)
+    public bool WorkJob(JobChoice jobChoice, WorkerInfo workerInfo)
     {
         bool isSuccessful = false;
+        float maxChance = GetMaxChance(jobChoice, workerInfo);
         switch (jobChoice)
         {
             case JobChoice.fishing:
-                isSuccessful = DoWork(0.25f, cashFishing, soundFishDeath01, soundFishDeath02, soundFishDeath03, soundFishDeath04, soundFishWin01, soundFishWin02, soundFishWin03, soundFishWin04);
+                isSuccessful = DoWork(maxChance, cashFishing, soundFishDeath01, soundFishDeath02, soundFishDeath03, soundFishDeath04, soundFishWin01, soundFishWin02, soundFishWin03, soundFishWin04);
                 break;
             case JobChoice.factory:
-                isSuccessful = DoWork(0.5f, cashFactory, soundFactoryDeath01, soundFactoryDeath02, soundFactoryDeath03, soundFactoryDeath04, soundFactoryWin01, soundFactoryWin02, soundFactoryWin03, soundFactoryWin04);
+                isSuccessful = DoWork(maxChance, cashFactory, soundFactoryDeath01, soundFactoryDeath02, soundFactoryDeath03, soundFactoryDeath04, soundFactoryWin01, soundFactoryWin02, soundFactoryWin03, soundFactoryWin04);
                 break;
         }
         return isSuccessful;
     }
 
+    public float GetMaxChance(JobChoice jobChoice, WorkerInfo workerInfo)
+    {
+        float highest = jobChoice == JobChoice.fishing ? 0.4f : 0.75f;
+        float skill = jobChoice == JobChoice.fishing ? workerInfo.skillFish : workerInfo.skillFactory;
+        float tired = workerInfo.skillTired;
+
+        skill /= 10;
+        tired /= 10;
+
+        highest -= skill;
+        highest += tired;
+        return highest;
+    }
+
     private bool DoWork(float maxChance, int money, AudioClip death01, AudioClip death02, AudioClip death03, AudioClip death04, AudioClip win01, AudioClip win02, AudioClip win03, AudioClip win04)
     {
+
         bool isSuccessful = true;
         if (Random.value > maxChance)
         {

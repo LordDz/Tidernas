@@ -4,8 +4,16 @@ public class BtnChoiceContainer : MonoBehaviour
 {
     private BtnChoice[] btns;
 
+    [SerializeField]
+    private BtnChoice endButton;
+
+    private ResourceHolder resourceHolder;
+    private DayHolder dayHolder;
+
     private void Start()
     {
+        resourceHolder = FindObjectOfType<ResourceHolder>();
+        dayHolder = FindObjectOfType<DayHolder>();
         btns = GetComponentsInChildren<BtnChoice>();
         HideButtons();
 
@@ -18,7 +26,14 @@ public class BtnChoiceContainer : MonoBehaviour
         {
             if (btn != null)
             {
-                btn.gameObject.SetActive(true);
+                if (btn == endButton)
+                {
+                    if (dayHolder.CurrentDay > 3 && resourceHolder)
+                }
+                else
+                {
+                    btn.gameObject.SetActive(true);
+                }
             }
         }
     }

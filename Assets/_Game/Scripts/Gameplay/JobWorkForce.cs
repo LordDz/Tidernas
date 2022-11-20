@@ -56,6 +56,8 @@ public class JobWorkForce : MonoBehaviour
 
         highest -= skill;
         highest += tired;
+        Debug.Log("MaxChance - highest: " + highest);
+
         return highest;
     }
 

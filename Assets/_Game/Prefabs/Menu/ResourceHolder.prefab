@@ -46,9 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   workerCost: 4
   workerFindCost: 1
-  cash: 9
+  cash: 30
   employeesTotal: 0
   employeesUnEmployed: 0
   publicOpinion: 8
   nrOfDeaths: 0
   listActiveWorkers: 
+  resourceDisplay: {fileID: 0}
+  workerInfoCard: {fileID: 0}

@@ -33,6 +33,9 @@ public class ResourceHolder : MonoBehaviour
     WorkersForHire workersForHire;
     WorkerInfo nextWorker;
 
+    [SerializeField]
+    GameObject workerInfoCard;
+
     private void Start()
     {
         reportsPage = FindObjectOfType<ReportsPage>();
@@ -48,6 +51,10 @@ public class ResourceHolder : MonoBehaviour
         listActiveWorkers.Add(jobChoice);
         employeesUnEmployed -= 1;
         resourceDisplay.textEmployees.SetText(employeesUnEmployed.ToString() + " / " + employeesTotal.ToString());
+
+        WorkerInfo workerToShow = workersForHire.GetWorker(employeesUnEmployed);
+        workersForHire.ShowWorkerInfo(workerToShow);
+        workerInfoCard.SetActive(true);
 
         if (employeesUnEmployed <= 0)
         {
@@ -73,30 +80,35 @@ public class ResourceHolder : MonoBehaviour
             resourceDisplay.textCash.SetText(cash.ToString());
 
             workersForHire.AddNewWorker(nextWorker);
-            nextWorker = workersForHire.GetWorkerInfo();
+            btnHireWorkersContainer.HideButtonHireWorker();
 
             if (cash < workerCost)
             {
-                btnHireWorkersContainer.HideButtonWorker();
+                btnHireWorkersContainer.HideButtonFindWorker();
             }
         }
     }
 
     public void FindNewWorker()
     {
-        Debug.Log("find worker!?" + workerFindCost);
-        Debug.Log("cash after" + cash);
         if (cash >= workerFindCost)
         {
+            Debug.Log("FIND NEW WORKER?!");
             cash -= workerFindCost;
             resourceDisplay.textCash.SetText(cash.ToString());
 
             //workersForHire.AddNewWorker(nextWorker);
             nextWorker = workersForHire.GetWorkerInfo();
+            workerInfoCard.SetActive(true);
 
             if (cash < workerCost)
             {
-                btnHireWorkersContainer.HideButtonWorker();
+                btnHireWorkersContainer.HideButtonFindWorker();
+                btnHireWorkersContainer.HideButtonHireWorker();
+            }
+            else
+            {
+                btnHireWorkersContainer.ShowButtons(cash, workerCost);
             }
         }
     }

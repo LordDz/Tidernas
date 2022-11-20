@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191b0cfa34739af44866bae64af93982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textWorker: {fileID: 2367836821334313599}
   btnStart: {fileID: 4431155740616907265}
   spriteFisher: {fileID: 21300000, guid: 403e0ce7413da4f45a58a0679194ef58, type: 3}
   spriteFactory: {fileID: 21300000, guid: cf5cb672c89fba849a81eed0d24f669d, type: 3}
+  textWorkerJob: {fileID: 2367836821334313599}
 --- !u!1001 &1566951125016695913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,9 +57,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6809322707071041283}
     m_Modifications:
+    - target: {fileID: 722237502067851903, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f73a7d8758d7be04588b15637d94b5a8, type: 3}
     - target: {fileID: 3591662967352763796, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_Name
-      value: TextInfo
+      value: TextWorker
+      objectReference: {fileID: 0}
+    - target: {fileID: 3591662967352763796, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7818327634187198121, guid: 0a5eb70a60340674b93e0b326a66fd74, type: 3}
       propertyPath: m_IsActive
@@ -181,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 418721986219598076, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 403e0ce7413da4f45a58a0679194ef58, type: 3}
+      objectReference: {fileID: 21300000, guid: cf195ec1f698d488fb3fdeebc2b3ad33, type: 3}
     - target: {fileID: 418721986219598076, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_Color.b
       value: 0.21568629
@@ -288,11 +296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5532164351246388700, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -58
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 5532164351246388700, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -243
+      value: -213
       objectReference: {fileID: 0}
     - target: {fileID: 5532164351246388700, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -341,6 +349,22 @@ PrefabInstance:
     - target: {fileID: 6953013885642103220, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341797515437848523, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 841.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341797515437848523, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 252.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341797515437848523, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341797515437848523, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.7093
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_text

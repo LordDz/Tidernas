@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Globalization;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ReportsPage : MonoBehaviour
@@ -15,7 +16,7 @@ public class ReportsPage : MonoBehaviour
     DayHolder dayHolder;
 
     [SerializeField]
-    InfoText textWorker;
+    GameObject workerInfoCard;
 
     private bool isReportStarted = false;
 
@@ -23,6 +24,12 @@ public class ReportsPage : MonoBehaviour
 
     [SerializeField]
     private Sprite spriteFisher, spriteFactory;
+
+    [SerializeField]
+    InfoText textWorkerJob;
+
+    [SerializeField]
+    AudioSource soundShowReportsPage, soundSwitchToNextDaysPage;
 
     // Use this for initialization
     void Start()
@@ -34,6 +41,7 @@ public class ReportsPage : MonoBehaviour
         dayHolder = FindObjectOfType<DayHolder>();
         workersForHire = FindObjectOfType<WorkersForHire>();
         btnStart.gameObject.SetActive(false);
+        textWorkerJob.gameObject.SetActive(false);
     }
 
     public void ShowReportPage()
@@ -41,12 +49,13 @@ public class ReportsPage : MonoBehaviour
         btnStart.gameObject.SetActive(true);
         btnChoiceContainer.HideButtons();
         btnHireWorkersContainer.HideButtons();
+        soundShowReportsPage.Play();
     }
 
     public void StartReport()
     {
         btnStart.gameObject.SetActive(false);
-        textWorker.gameObject.SetActive(true);
+
         cooldown = 1.0f;
         index = 0;
         isReportStarted = true;
@@ -54,8 +63,10 @@ public class ReportsPage : MonoBehaviour
 
     private void StopReport()
     {
-        textWorker.gameObject.SetActive(false);
         isReportStarted = false;
+        textWorkerJob.gameObject.SetActive(false);
+        soundSwitchToNextDaysPage.Play();
+
         dayHolder.NextDay();
     }
 
@@ -86,13 +97,26 @@ public class ReportsPage : MonoBehaviour
     {
         JobChoice workerJob = resourceHolder.listActiveWorkers[index];
         var worker = workersForHire.GetWorker(index);
-        string workType = workerJob == JobChoice.fishing ? "fisher" : "factorian";
+
         Sprite workSprite = workerJob == JobChoice.fishing ? spriteFisher : spriteFactory;
-        textWorker.SetText(worker.personName + " " + workType);
-        textWorker.SetIcon(workSprite);
-        jobWorkForce.WorkJob(workerJob);
+
+        workersForHire.ShowWorkerInfo(worker);
+        bool isSuccessful = jobWorkForce.WorkJob(workerJob);
+        var jobText = workerJob == JobChoice.fishing ? "Fishing" : "Factory";
+        string workText = isSuccessful ? jobText : " DEAD";
+        Debug.Log("workText: " + workText);
+
+        textWorkerJob.SetText(workText);
+        textWorkerJob.SetIcon(workSprite);
+        textWorkerJob.gameObject.SetActive(true);
+        workerInfoCard.SetActive(true);
 
         cooldown = timePerWorker;
         index++;
+
+        if (index >= resourceHolder.listActiveWorkers.Count)
+        {
+            cooldown += 1.5f;
+        }
     }
 }

@@ -26,11 +26,10 @@ public class WorkersForHire : MonoBehaviour
     {
         listWorkers.Add(worker);
     }
-
     public WorkerInfo GetWorker(int index)
     {
-        Debug.Log("GetWorker with index: " + index);
-        Debug.Log("listWorkers.count: " + listWorkers.Count);
+        //Debug.Log("GetWorker with index: " + index);
+        //Debug.Log("listWorkers.count: " + listWorkers.Count);
         return listWorkers[index];
     }
 
@@ -59,5 +58,20 @@ public class WorkersForHire : MonoBehaviour
         personText.SetText(personName);
         personImage.sprite = personSprite;
         return workerInfo;
+    }
+
+    public void ShowWorkerInfo(WorkerInfo workerInfo)
+    {
+        personText.SetText(workerInfo.personName);
+        personImage.sprite = workerInfo.personPicture;
+
+        personImage.gameObject.SetActive(true);
+        personText.gameObject.SetActive(true);
+    }
+
+    public void HideWorkerInfo()
+    {
+        personImage.gameObject.SetActive(false);
+        personText.gameObject.SetActive(false);
     }
 }

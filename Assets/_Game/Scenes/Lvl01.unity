@@ -1435,6 +1435,10 @@ PrefabInstance:
       propertyPath: workerInfoCard
       value: 
       objectReference: {fileID: 1818848255}
+    - target: {fileID: 8493527617974449175, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
+      propertyPath: m_Volume
+      value: 0.62
+      objectReference: {fileID: 0}
     - target: {fileID: 8835484672306699470, guid: 663808b40ffb3a34eb81b1214fc22f0f, type: 3}
       propertyPath: resourceDisplay
       value: 

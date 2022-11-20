@@ -62,7 +62,7 @@ public class HighScoreHandler : MonoBehaviour
         {
             message = "Good job, but not as good as your best score. You can do better!";
         }
-        scoreValueText.SetText(score.ToString() + " fame");
+        scoreValueText.SetText(score.ToString());
         scoreMessage.SetText(message);
         titleText.gameObject.SetActive(true);
         fameText.gameObject.SetActive(true);

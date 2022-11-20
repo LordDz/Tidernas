@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_text
-      value: Find Worker
+      value: Find New!
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_fontColor.b
@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_text
-      value: Hire Worker
+      value: Hire ->
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_fontColor.b
@@ -623,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_text
-      value: Start Day
+      value: Work!
       objectReference: {fileID: 0}
     - target: {fileID: 7976608565032425028, guid: 1a315dfc1b1c6cd49b4723afcf03c18f, type: 3}
       propertyPath: m_fontColor.b

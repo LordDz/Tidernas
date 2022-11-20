@@ -24,6 +24,7 @@ public class ResourceHolder : MonoBehaviour
     [HideInInspector]
     public List<JobChoice> listActiveWorkers = new List<JobChoice>();
 
+    [SerializeField]
     ResourceDisplay resourceDisplay;
     ReportsPage reportsPage;
 
@@ -34,7 +35,6 @@ public class ResourceHolder : MonoBehaviour
 
     private void Start()
     {
-        resourceDisplay = FindObjectOfType<ResourceDisplay>();
         reportsPage = FindObjectOfType<ReportsPage>();
         btnHireWorkersContainer = FindObjectOfType<BtnHireWorkersContainer>();
         workersForHire = FindObjectOfType<WorkersForHire>();

@@ -28,7 +28,14 @@ public class BtnChoiceContainer : MonoBehaviour
             {
                 if (btn == endButton)
                 {
-                    if (dayHolder.CurrentDay > 3 && resourceHolder)
+                    if (dayHolder.CurrentDay > 3 && resourceHolder.cash < dayHolder.GetCashGoalForWeek() * 0.4)
+                    {
+                        btn.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        btn.gameObject.SetActive(false);
+                    }
                 }
                 else
                 {

@@ -27,6 +27,12 @@ public class BtnChoice : MonoBehaviour
         resourceHolder.HireWorker();
     }
 
+    public void ChoiceFindNewWorker()
+    {
+        Debug.Log("FIND NEW WORKER CLICKED ON!?");
+        resourceHolder.FindNewWorker();
+    }
+
     public void EnableButton()
     {
         btn ??= GetComponent<Button>();

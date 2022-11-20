@@ -38,14 +38,15 @@ public class ReportsPage : MonoBehaviour
 
     public void ShowReportPage()
     {
+        btnStart.gameObject.SetActive(true);
         btnChoiceContainer.HideButtons();
         btnHireWorkersContainer.HideButtons();
-        btnStart.gameObject.SetActive(true);
     }
 
     public void StartReport()
     {
         btnStart.gameObject.SetActive(false);
+        textWorker.gameObject.SetActive(true);
         cooldown = 1.0f;
         index = 0;
         isReportStarted = true;
@@ -53,6 +54,7 @@ public class ReportsPage : MonoBehaviour
 
     private void StopReport()
     {
+        textWorker.gameObject.SetActive(false);
         isReportStarted = false;
         dayHolder.NextDay();
     }
